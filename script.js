@@ -63,9 +63,18 @@ let atual = 0;
 let perguntaAtual; 
 
 function mostraPergunta() { 
-    perguntaAtual = perguntas[atual]; 
-    caixaPerguntas.textContent = perguntaAtual.enunciado; 
+    perguntaAtual = perguntas[atual]; // Ajustado: adicionado "=" e os colchetes "[]"
+    caixaPerguntas.textContent = perguntaAtual.enunciado; // Ajustado: adicionado "="
+    caixaAlternativas.innerHTML = ""; // Bom hábito: limpa as alternativas anteriores
+    mostraAlternativas(); 
+} 
+
+function mostraAlternativas() { 
+    for(const alternativa of perguntaAtual.alternativas) { 
+        const botaoAlternativa = document.createElement("button"); 
+        botaoAlternativa.textContent = alternativa.texto; // Ajustado: adicionado "="
+        caixaAlternativas.appendChild(botaoAlternativa); 
+    } 
+    
 }
 
-// Chame a função fora dela para iniciar
-mostraPergunta();
