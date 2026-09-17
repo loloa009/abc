@@ -30,7 +30,7 @@ const perguntas = [
                 afirmacao: "afrimacao"
             }
         ]
-    }
+    },
 
     {
         enunciado: "Duda observa que harry tem um carta entregando-a a tio Valter, o mesmo percebendo o perigo proibiu harry de ler a carta. Com o tempo várias dessas carta apareciam no lugar em que fossem, levando valter a loucura tomando uma atitude drástica. Ele tiveram que morar em um farol. Até que uma noite a porta do farol é arrombada revelando Hagrid, um hoem gigante que contou a harry sua verdadeira história. Harry descobrindo que era bruxa se viu por seguir em dois caminhos, qual ele deve escolher",
@@ -57,7 +57,7 @@ const perguntas = [
                 afirmacao: "afirmacao"
             }
         ]
-    }
+    },
 ];
 let atual = 0; 
 let perguntaAtual; 
