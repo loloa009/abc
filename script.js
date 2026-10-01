@@ -10,11 +10,17 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Ele deve recorrer aos únicos parentes vivos de Harry.",
-                afirmacao: "Você decidiu que Harry deveria ficar com seus parentes trouxas."
+                afirmacao: [
+                "Você decidiu que Harry deveria ficar com seus parentes trouxas.",
+
+                ]
             },
             {
                 texto: "Ele deve permitir que alguém da Ordem da Fênix adote-o.",
-                afirmacao: "Você decidiu que Harry deveria ser criado por alguém da Ordem da Fênix."
+                afirmacao: [
+                "Você decidiu que Harry deveria ser criado por alguém da Ordem da Fênix.",
+                
+                ]
             }
         ]
     },
@@ -24,11 +30,17 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Harry deve levar a carta até a cozinha, onde sua família possa ver a carta.",
-                afirmacao: "Harry decidiu mostrar a carta para sua família."
+                afirmacao: [
+                "Harry decidiu mostrar a carta para sua família.",
+
+                ]
             },
             {
                 texto: "Harry deve esconder a carta e abrir sob o armário embaixo da escada à noite, onde ninguém possa vê-la.",
-                afirmacao: "Harry decidiu esconder a carta dos seus tios."
+                afirmacao: [
+                "Harry decidiu esconder a carta dos seus tios.",
+
+                ]
             }
         ]
     },
@@ -38,11 +50,17 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Harry se junta à aventura no mundo bruxo com Hagrid.",
-                afirmacao: "Harry decidiu conhecer o mundo bruxo e começar sua aventura."
+                afirmacao: [
+                "Harry decidiu conhecer o mundo bruxo e começar sua aventura.",
+
+                ]
             },
             {
                 texto: "Harry decide que não é a melhor escolha a se fazer, se juntando novamente aos tios.",
-                afirmacao: "Harry decidiu permanecer com seus tios e abandonar o mundo bruxo."
+                afirmacao: [
+                "Harry decidiu permanecer com seus tios e abandonar o mundo bruxo.",
+
+                ]
             }
         ]
     },
@@ -52,11 +70,17 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Como um bom grifinório, deve enfrentar Voldemort.",
-                afirmacao: "Harry decidiu enfrentar Voldemort e lutar para proteger o mundo bruxo."
+                afirmacao: [
+                "Harry decidiu enfrentar Voldemort e lutar para proteger o mundo bruxo.",
+
+                ]
             },
             {
                 texto: "Harry deve se esconder e deixar o mundo bruxo sofrer com a volta Daquele-Que-Não-Deve-Ser-Nomeado.",
-                afirmacao: "Harry decidiu fugir e deixar que o mundo bruxo enfrentasse Voldemort sozinho."
+                afirmacao: [
+                "Harry decidiu fugir e deixar que o mundo bruxo enfrentasse Voldemort sozinho.",
+                
+                ]
             }
         ]
     }
