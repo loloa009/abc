@@ -124,4 +124,9 @@ function mostraResultado() {
     caixaAlternativa.textContent = "";
 }
 
+function aleatorio (Lista){
+    const posicao = Math.floor(Math.random()* Lista.lenght)
+    return Lista[posicao];
+}
+
 mostraPergunta();
