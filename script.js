@@ -87,7 +87,8 @@ const perguntas = [
 ];
 
 let atual = 0;
-let historia = "";
+let perguntaAtual;
+let historiaFinal = "";
 
 function mostraPergunta() {
     if (atual >= perguntas.length) {
@@ -95,35 +96,32 @@ function mostraPergunta() {
         return;
     }
 
-    const perguntaAtual = perguntas[atual];
-
+    perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
-    caixaAlternativas.innerHTML = "";
+    caixaAlternativas.textContent = "";
+    mostraAlternativas();
+}
 
+function mostraAlternativas() {
     for (const alternativa of perguntaAtual.alternativas) {
-        const botaoAlternativa = document.createElement("button");
-
+        const botaoAlternativas = document.createElement("button");
         botaoAlternativa.textContent = alternativa.texto;
-
-        botaoAlternativa.addEventListener("click", () => {
-            historia += alternativa.afirmacao + " ";
-
-            atual++;
-
-            mostraPergunta();
-        });
-
+        botaoAlternativa.addEventListener("click", () => respostaSelecionada(alternativa));
         caixaAlternativas.appendChild(botaoAlternativa);
     }
 }
 
+function respostaSelecionada(opcaoSelecionada) {
+    const afirmacoes = opcaoSelecionada.afirmacao;
+    historiaFinal += afirmacoes + " ";
+    atual++;
+    mostraPergunta();
+}
+
 function mostraResultado() {
     caixaPerguntas.textContent = "O futuro de Harry Potter foi decidido!";
-    caixaAlternativas.innerHTML = "";
-
-    textoResultado.textContent = historia;
-
-    caixaResultado.style.display = "block";
+    textoResultado.textContent = historiaFinal;
+    caixaAlternativa.textContent = "";
 }
 
 mostraPergunta();
