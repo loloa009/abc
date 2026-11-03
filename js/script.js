@@ -6,6 +6,7 @@ const caixaPerguntas = document.querySelector(".caixa-perguntas");
 const caixaAlternativas = document.querySelector(".caixa-alternativas");
 const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
+const botaoJogarNovamente = document.querySelector(".novamente-btn")
 
 let atual = 0;
 let perguntaAtual;
@@ -43,6 +44,13 @@ function mostraResultado() {
     caixaPerguntas.textContent = "O futuro de Harry Potter foi decidido!";
     textoResultado.textContent = historiaFinal;
     caixaAlternativa.textContent = "";
+    botaoJogarNovamente.addEventListener
+}
+
+function jogarNovamente(){
+    atual = 0;
+    historiaFinal = "";
+    mostraPergunta ();
 }
 
 
