@@ -1,10 +1,4 @@
-const caixaPrincipal = document.querySelector(".caixa-principal");
-const caixaPerguntas = document.querySelector(".caixa-perguntas");
-const caixaAlternativas = document.querySelector(".caixa-alternativas");
-const caixaResultado = document.querySelector(".caixa-resultado");
-const textoResultado = document.querySelector(".texto-resultado");
-
-const perguntas = [
+export const perguntas = [
     {
         enunciado: "A 00:00 do dia 31 de outubro, uma felicidade ocorreu no mundo bruxo. O Lorde das Trevas caiu, porém deixando como último registro, a morte de Lilian e Thiago Potter. Que por sua vez deixaram um pequenino que surpreendentemente sobrevivera à maldição da morte. Um grande bruxo que atende pelo nome de Alvo Dumbledore teria que tomar uma decisão sobre como iria proteger Harry Potter! Agora, como Dumbledore deve agir?",
         alternativas: [
@@ -85,48 +79,3 @@ const perguntas = [
         ]
     }
 ];
-
-let atual = 0;
-let perguntaAtual;
-let historiaFinal = "";
-
-function mostraPergunta() {
-    if (atual >= perguntas.length) {
-        mostraResultado();
-        return;
-    }
-
-    perguntaAtual = perguntas[atual];
-    caixaPerguntas.textContent = perguntaAtual.enunciado;
-    caixaAlternativas.textContent = "";
-    mostraAlternativas();
-}
-
-function mostraAlternativas() {
-    for (const alternativa of perguntaAtual.alternativas) {
-        const botaoAlternativas = document.createElement("button");
-        botaoAlternativa.textContent = alternativa.texto;
-        botaoAlternativa.addEventListener("click", () => respostaSelecionada(alternativa));
-        caixaAlternativas.appendChild(botaoAlternativa);
-    }
-}
-
-function respostaSelecionada(opcaoSelecionada) {
-    const afirmacoes = aleatorio(opcaoSelecionada.afirmacao);
-    historiaFinal += afirmacoes + " ";
-    atual++;
-    mostraPergunta();
-}
-
-function mostraResultado() {
-    caixaPerguntas.textContent = "O futuro de Harry Potter foi decidido!";
-    textoResultado.textContent = historiaFinal;
-    caixaAlternativa.textContent = "";
-}
-
-function aleatorio (Lista){
-    const posicao = Math.floor(Math.random()* Lista.lenght)
-    return Lista[posicao];
-}
-
-mostraPergunta();
