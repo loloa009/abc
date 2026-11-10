@@ -44,13 +44,15 @@ function mostraResultado() {
     caixaPerguntas.textContent = "O futuro de Harry Potter foi decidido!";
     textoResultado.textContent = historiaFinal;
     caixaAlternativa.textContent = "";
-    botaoJogarNovamente.addEventListener
+    caixaResultado.classList.add("mostrar");
+    botaoJogarNovamente.addEventListener("click", jogaNovamente);
 }
 
 function jogarNovamente(){
     atual = 0;
     historiaFinal = "";
-    mostraPergunta ();
+    caixaResultado.classList.remove("mostrar");
+    mostraPergunta();
 }
 
 
