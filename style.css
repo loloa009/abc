@@ -74,3 +74,11 @@ h1 {
   font-size: 18px;
   line-height: 1.6;
 }
+
+.caixa-resultado{
+  display: none;
+}
+
+.caixa-resultado.mostrar{
+  display: block;
+}
