@@ -1,4 +1,9 @@
-:root {
+@import url('body {
+  font-family: 'Roboto', sans-serif;
+}
+');
+
+root {
   --cor-fundo: #01080E;
   --cor-principal: #0B0D20;
   --cor-secundaria: #212333;
