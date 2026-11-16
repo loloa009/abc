@@ -1,4 +1,4 @@
-import { aleatorio } from './aleatorio.js';
+import { aleatorio, nome } from './aleatorio.js';
 import { perguntas } from './perguntas.js';
 
 const caixaPrincipal = document.querySelector(".caixa-principal");
@@ -41,12 +41,13 @@ function respostaSelecionada(opcaoSelecionada) {
 }
 
 function mostraResultado() {
-    caixaPerguntas.textContent = "O futuro de Harry Potter foi decidido!";
+    caixaPerguntas.textContent = `O futuro de Harry Potter foi decidido!`;
     textoResultado.textContent = historiaFinal;
     caixaAlternativa.textContent = "";
     caixaResultado.classList.add("mostrar");
     botaoJogarNovamente.addEventListener("click", jogaNovamente);
 }
+
 
 function jogarNovamente(){
     atual = 0;
