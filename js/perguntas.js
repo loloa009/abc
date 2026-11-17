@@ -6,15 +6,16 @@ export const perguntas = [
                 texto: "Ele deve recorrer aos únicos parentes vivos de Harry.",
                 afirmacao: [
                 "Você decidiu que Harry deveria ficar com seus parentes trouxas.",
-
-                ]
+                 ],
+                 proxima: 1,
             },
             {
                 texto: "Ele deve permitir que alguém da Ordem da Fênix adote-o.",
                 afirmacao: [
                 "Você decidiu que Harry deveria ser criado por alguém da Ordem da Fênix.",
                 
-                ]
+                ],
+                proxima: 2,
             }
         ]
     },
@@ -27,14 +28,16 @@ export const perguntas = [
                 afirmacao: [
                 "Harry decidiu mostrar a carta para sua família.",
 
-                ]
+                ],
+                proxima: 3,
             },
             {
                 texto: "Harry deve esconder a carta e abrir sob o armário embaixo da escada à noite, onde ninguém possa vê-la.",
                 afirmacao: [
                 "Harry decidiu esconder a carta dos seus tios.",
 
-                ]
+                ],
+                proxima: 4,
             }
         ]
     },
@@ -47,14 +50,16 @@ export const perguntas = [
                 afirmacao: [
                 "Harry decidiu conhecer o mundo bruxo e começar sua aventura.",
 
-                ]
+                ],
+                proxima: 6,
             },
             {
                 texto: "Harry decide que não é a melhor escolha a se fazer, se juntando novamente aos tios.",
                 afirmacao: [
                 "Harry decidiu permanecer com seus tios e abandonar o mundo bruxo.",
 
-                ]
+                ],
+                proxima: 7,
             }
         ]
     },
@@ -67,14 +72,14 @@ export const perguntas = [
                 afirmacao: [
                 "Harry decidiu enfrentar Voldemort e lutar para proteger o mundo bruxo.",
 
-                ]
+                ],
             },
             {
                 texto: "Harry deve se esconder e deixar o mundo bruxo sofrer com a volta Daquele-Que-Não-Deve-Ser-Nomeado.",
                 afirmacao: [
                 "Harry decidiu fugir e deixar que o mundo bruxo enfrentasse Voldemort sozinho.",
                 
-                ]
+                ],
             }
         ]
     }

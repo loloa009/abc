@@ -37,11 +37,17 @@ function respostaSelecionada(opcaoSelecionada) {
     const afirmacoes = aleatorio(opcaoSelecionada.afirmacao);
     historiaFinal += afirmacoes + " ";
     atual++;
+    if(opcaoSelecionada.proxima != undefined){
+        atual - opcaoSelecionada.proxima;
+    }else {
+        mostraResultado();
+        return;
+    }
     mostraPergunta();
 }
 
 function mostraResultado() {
-    caixaPerguntas.textContent = `O futuro de Harry Potter foi decidido!`;
+    caixaPerguntas.textContent = `O futuro de Harry Potter foi decidido!, ${nome}`;
     textoResultado.textContent = historiaFinal;
     caixaAlternativa.textContent = "";
     caixaResultado.classList.add("mostrar");
@@ -56,6 +62,11 @@ function jogarNovamente(){
     mostraPergunta();
 }
 
+function substituiNome(){
+ for(const pergunta of perguntas){
+    pergunta.enunciado = pergunta.enunciado.replace(/você/g, nome);
+ }
+}
 
-
+substituiNome();
 mostraPergunta();
